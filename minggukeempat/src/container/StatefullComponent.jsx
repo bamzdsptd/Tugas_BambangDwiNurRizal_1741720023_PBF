@@ -19,7 +19,7 @@ class StatefullComponent extends React.Component{
                         </thead>
                         <tbody>
                             <td><label>Password</label></td>
-                            <td><input type="text" name="username" id="username" placeholder="masukan password"/></td>
+                            <td><input type="password" name="username" id="username" placeholder="masukan password"/></td>
                         </tbody>
                     </table>
                     <button>Login</button><br></br>
