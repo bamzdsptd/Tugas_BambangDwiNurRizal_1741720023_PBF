@@ -124,7 +124,7 @@ class BlogPost extends Component{
     }
 
     handleHapusArtikel = (data) => {
-        fetch('http://localhost:3001/mahasiswa/' + data, {method: 'DELETE'})
+        fetch('http://localhost:3001/mahasiswa/', {method: 'DELETE'})
         .then(res => {
             this.ambilDataDariServerAPI();
         })
@@ -199,7 +199,9 @@ class BlogPost extends Component{
                 <h2>DATA MAHASISWA</h2>
                 {
                     this.state.dataMahasiswa.map(dataMaha => {
-                        return <Post key={dataMaha.NIM}  NIM={dataMaha.NIM} nama={dataMaha.nama} alamat={dataMaha.alamat} hp={dataMaha.hp} angkatan={dataMaha.angkatan} status={dataMaha.status} hapusDataMaha={this.handleHapusArtikel}/>
+                        return <Post key={dataMaha.NIM}  NIM={dataMaha.NIM} nama={dataMaha.nama} 
+                        alamat={dataMaha.alamat} hp={dataMaha.hp} angkatan={dataMaha.angkatan} 
+                        status={dataMaha.status} hapusDataMaha={this.handleHapusArtikel}/>
                     })
                 }
             </div>

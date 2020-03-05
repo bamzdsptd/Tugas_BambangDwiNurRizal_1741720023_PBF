@@ -33,6 +33,24 @@
       "angkatan": "99",
       "status": "cerai",
       "id": 1583386604521
+    },
+    {
+      "NIM": "22",
+      "nama": "x",
+      "alamat": "suukuun",
+      "hp": "2222222",
+      "angkatan": "222",
+      "status": "nnn",
+      "id": 1583425671991
+    },
+    {
+      "NIM": "1741720023",
+      "nama": "BAMBANG DWI NUR RIZAL",
+      "alamat": "JL. SUKUN SIDOMULYO RT.04 / RW.07",
+      "hp": "089514574261",
+      "angkatan": "17",
+      "status": "PELAJAR",
+      "id": 1583426636993
     }
   ]
 }
