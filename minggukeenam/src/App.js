@@ -232,9 +232,9 @@
 //           <Route path="/public">
 //             <PublicPage />
 //           </Route>
-//           <Route path="/login">
-//             <LoginPage />
-//           </Route>
+          // <Route path="/login">
+          //   <LoginPage />
+          // </Route>
 //           <PrivateRoute path="/private">
 //             <ProtectedPage />
 //           </PrivateRoute>
@@ -337,23 +337,24 @@ export default function Navbar() {
   return (
     <Router>
         <div class="topnav">
-          <AuthButton />
+          
             
-            <Link to="/" class="active">Home</Link>
-            
-            
+            <Link to="/Home" class="active">Home</Link>
             <Link to="/rumahtangga">Kategori Rumah Tangga</Link>
             <Link to="/mobil">Kategori Mobil</Link>
             <Link to="/motor">Kategori Motor</Link>
+            <AuthButton /> 
             
           </div>
           <div>
           <hr />
         <Switch>
-        <Route path="/">
+          <Route exact path="/Home">
             <Home />
           </Route>
-          
+          <Route path="/login">
+            <LoginPage />
+          </Route>
           <PrivateRoute path="/rumahtangga">
             <RumahTangga />
           </PrivateRoute>
@@ -389,10 +390,8 @@ function AuthButton(){
 
   return fakeAuth.isAuthenticated ? (
     <p>
-      Welcome!(" ")
-      <br />
       <button onClick={() =>{
-        fakeAuth.signout(() => history.push("/"));
+        fakeAuth.signout(() => history.push("/Home"));
       }}>
         Sign Out
       </button>
@@ -417,19 +416,7 @@ function PrivateRoute({ children, ...rest}) {
   );
 }
 
-
-
-function Home(){
-  let history = useHistory();
-  let location = useLocation();
-
-  let { from } = location.state || {from:{pathname:"/"}};
-  let login = () => {
-    fakeAuth.authenticate(() => {
-      history.replace(from);
-    });
-  };
-
+function Home() {
   return (
     <div>
        <table class="table-noborder">
@@ -486,24 +473,39 @@ function Home(){
       </tr>
     
   </table> 
-      <p>You must log in to view the page at {from.pathname}</p>
+    </div>
+  )
+}
+
+function LoginPage(){
+  let history = useHistory();
+  let location = useLocation();
+  
+
+  let { from } = location.state || {from:{pathname:"/"}};
+  let login = () => {
+    fakeAuth.authenticate(() => {
+      history.replace(from);
+    });
+  };
+  alert(`You must log in to view the page at ${from.pathname}`)
+  return (
+    
+    <div class= "">
       <button onClick={login}>Log In</button>
     </div>
+      
+    
   );
 }
 
-// function Home(){
-//   return (
-//     <div>
-      
-//     </div>
-//   )
-// }
+
+
 
 function RumahTangga(){
   return (
     <div>
-      <h2>rr</h2>
+      <h2>INI PAGE KATEGORI RUMAH TANGGA</h2>
     </div>
   )
 }
@@ -511,7 +513,7 @@ function RumahTangga(){
 function Mobil(){
   return (
     <div>
-      <h2>INI MOBIL</h2>
+      <h2>INI PAGE KATEGORI MOBIL</h2>
     </div>
   )
 }
@@ -519,7 +521,7 @@ function Mobil(){
 function Motor(){
   return (
     <div>
-      <h2>INI MOTOR</h2>
+      <h2>INI PAGE KATEGORI MOTOR</h2>
     </div>
   )
 }
@@ -527,7 +529,7 @@ function Motor(){
 const Footer = () => {
   return(
     <div class="footer">
-      <p>bambangdnr09@gmail.com</p>
+      <p>Copyright © Bambang Dwi Nur Rizal 2020</p>
     </div>
   )
 }

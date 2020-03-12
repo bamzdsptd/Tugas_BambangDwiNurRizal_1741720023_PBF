@@ -26,13 +26,16 @@
 }
 
 .footer {
-  height:50px;
+  height:20px;
     line-height:50px;
+    
     background:#333;
     color:#fff;
  
     position:absolute;
     bottom:0px;
+    padding-bottom: 55px;
+    text-align: center;
  
     width:100%;
 }
