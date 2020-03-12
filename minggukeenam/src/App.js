@@ -347,6 +347,7 @@ export default function Navbar() {
             <Link to="/motor">Kategori Motor</Link>
             <AuthButton /> 
             
+            
           </div>
           <div>
           <hr />
@@ -520,7 +521,7 @@ function RumahTangga(){
 
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <h3>Please select a Category.</h3>
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />
@@ -529,6 +530,8 @@ function RumahTangga(){
     </div>
   )
 }
+
+
 
 function Mobil(){
   let { path, url } = useRouteMatch();
@@ -547,7 +550,7 @@ function Mobil(){
 
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <h3>Please select a Category.</h3>
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />
@@ -576,7 +579,7 @@ function Motor(){
 
       <Switch>
         <Route exact path={path}>
-          <h3>Please select a topic.</h3>
+          <h3>Please select a Category.</h3>
         </Route>
         <Route path={`${path}/:topicId`}>
           <Topic />
