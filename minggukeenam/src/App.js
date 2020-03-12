@@ -162,32 +162,32 @@
 // }
 
 // function Topics(){
-//   let { path, url } = useRouteMatch();
-//   return(
-//     <div>
-//       <h2>Topics</h2>
-//       <ul>
-//         <li>
-//           <Link to={`${url}/Sate, Nasi goreng`}>Kuliner</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/Wisata Alama, Museum`}>Travelling</Link>
-//         </li>
-//         <li>
-//           <Link to={`${url}/Ibis, JW Marriot`}>Review Hotel</Link>
-//         </li>
-//       </ul>
+  // let { path, url } = useRouteMatch();
+  // return(
+  //   <div>
+  //     <h2>Topics</h2>
+  //     <ul>
+  //       <li>
+  //         <Link to={`${url}/Sate, Nasi goreng`}>Kuliner</Link>
+  //       </li>
+  //       <li>
+  //         <Link to={`${url}/Wisata Alama, Museum`}>Travelling</Link>
+  //       </li>
+  //       <li>
+  //         <Link to={`${url}/Ibis, JW Marriot`}>Review Hotel</Link>
+  //       </li>
+  //     </ul>
 
-//       <Switch>
-//         <Route exact path={path}>
-//           <h3>Please select a topic.</h3>
-//         </Route>
-//         <Route path={`${path}/:topicId`}>
-//           <Topic />
-//         </Route>
-//       </Switch>
-//     </div>
-//   )
+  //     <Switch>
+  //       <Route exact path={path}>
+  //         <h3>Please select a topic.</h3>
+  //       </Route>
+  //       <Route path={`${path}/:topicId`}>
+  //         <Topic />
+  //       </Route>
+  //     </Switch>
+  //   </div>
+  // )
 // }
 
 // function Topic(){
@@ -328,7 +328,9 @@ import {
   Link,
   Redirect,
   useHistory,
-  useLocation
+  useLocation,
+  useRouteMatch,
+  useParams
 } from "react-router-dom";
 
 
@@ -499,29 +501,97 @@ function LoginPage(){
   );
 }
 
-
-
-
 function RumahTangga(){
-  return (
+  let { path, url } = useRouteMatch();
+  return(
     <div>
-      <h2>INI PAGE KATEGORI RUMAH TANGGA</h2>
+      <h2>Kategori Rumah Tangga</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/Panci, Sendok Makan, Piring`}>Dapur</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Spring Bed, Bantal, Guling`}>Kamar Tidur</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Gayung, Tempat Sabun, Shower Cap`}>Kamar Mandi</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic />
+        </Route>
+      </Switch>
     </div>
   )
 }
 
 function Mobil(){
-  return (
+  let { path, url } = useRouteMatch();
+  return(
     <div>
-      <h2>INI PAGE KATEGORI MOBIL</h2>
+      <h2>Kategori Mobil</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/X-Pander, Xenia, Inova`}>Keluarga</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Audi, Lamborghini, BMW`}>Sport</Link>
+        </li>
+        
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic />
+        </Route>
+      </Switch>
     </div>
   )
 }
 
 function Motor(){
+  let { path, url } = useRouteMatch();
+  return(
+    <div>
+      <h2>Kategori Motor</h2>
+      <ul>
+        <li>
+          <Link to={`${url}/Harley Davidson, BMW`}>CC Tinggi</Link>
+        </li>
+        <li>
+          <Link to={`${url}/R25, Ninja, CRF`}>CC Sedang</Link>
+        </li>
+        <li>
+          <Link to={`${url}/Supra, Beat, Kharisma`}>CC Rendah</Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route exact path={path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+        <Route path={`${path}/:topicId`}>
+          <Topic />
+        </Route>
+      </Switch>
+    </div>
+  )
+}
+
+function Topic(){
+  let {topicId} = useParams();
+
   return (
     <div>
-      <h2>INI PAGE KATEGORI MOTOR</h2>
+      <h3>{topicId}</h3>
     </div>
   )
 }
