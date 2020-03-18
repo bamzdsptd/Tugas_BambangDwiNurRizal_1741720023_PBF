@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux' 
 import { createStore, applyMiddleware, compose } from 'redux' 
 import MainReducer from './reducers/MainReducer'  
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import registerServiceWorker from './registerServiceWorker'; 
  
 const store = compose(window.devToolsExtension ? window.devToolsExtension() : f => f)(createStore)(MainReducer) 

@@ -1,7 +1,7 @@
 import React, { Component } from "react"; 
 import { connect } from "react-redux"; 
 import {   deleteTodo,   toggleTodo,   setVisibilityFilter } from "../actions/actionCreator"; 
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "../actions/actionsTypes"; 
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "../actions/actionTypes"; 
 import { bindActionCreators } from "redux"; 
  
 class Table extends Component {   
