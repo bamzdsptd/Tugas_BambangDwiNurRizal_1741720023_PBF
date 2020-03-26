@@ -124,8 +124,11 @@ const renderField = ({ input, label, type, meta: { touched, error, warning } }) 
   </span>))}     
   </div>   
   </div> 
-  ) 
-SignInForm = reduxForm({   form: 'signIn',   validate, })(SignInForm); 
+) 
+SignInForm = reduxForm({   
+  form: 'signIn',   
+  validate, 
+})(SignInForm); 
  
 class App extends Component { 
  
