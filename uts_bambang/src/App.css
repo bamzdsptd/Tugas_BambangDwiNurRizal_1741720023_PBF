@@ -1,0 +1,165 @@
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.botton {
+  text-align: left;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 16px;
+}
+
+.footer {
+  height:20px;
+    line-height:40px;
+    
+    background:#333;
+    color:#fff;
+ 
+    position: -webkit-sticky;
+    bottom: 0;
+    
+    padding-bottom: 40px;
+    text-align: center;
+ 
+    width:100%;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.table-noborder{
+  
+  table-layout: fixed;
+  margin-left: 200px;
+  margin-top: 20px;
+}
+
+.App-header {
+  background-color: blue;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: red;
+}
+
+.set-table{
+  text-align: center;
+  border: 40px;
+}
+
+#home{
+  text-align: center;
+}
+
+.warnaB{
+  color:white;
+}
+
+h4{
+  text-align: center;
+  color: black;
+}
+
+p{
+  color: cornsilk;
+}
+
+.Q{
+  text-align: right;
+}
+
+.R{
+  text-align: center;
+  color:red;
+}
+
+.p{
+  text-align: justify;
+  color: cornsilk;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-bottom: 20px;
+}
+
+.P{
+  color: cornsilk;
+  font-size: 30px;
+  font-style: bold;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.border{
+  border-style: outset;
+  text-align: center;
+  background-color: cornsilk;
+  width: 340px;
+  height: 420px;
+  margin: 10px auto;
+}
+
+.b {
+  padding:10px;
+  width: 80%;
+  margin:10px auto;
+  background-color: green;
+  color: white;
+  border: 0ch;
+}
+
+input{
+  padding : 7px 20px;
+}
+
+.cancel{
+  
+  padding:10px;
+  width: 20%;
+  margin:10px auto;
+  background-color: red;
+  color: white;
+  border: 0ch;
+}
