@@ -24,9 +24,6 @@ const Login = (response) => {
         });
     };
     
-// const responseGoogle = (response) => {
-//     console.log(response);
-// }
     return (
         <div>
             <h1>Login</h1>
