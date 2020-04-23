@@ -3,13 +3,13 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDpd0HfsOcY3v0zOHdDgQGPVgCxmsKkX8M",
-  authDomain: "fir-login-6bae3.firebaseapp.com",
-  databaseURL: "https://fir-login-6bae3.firebaseio.com",
-  projectId: "fir-login-6bae3",
-  storageBucket: "fir-login-6bae3.appspot.com",
-  messagingSenderId: "844791486238",
-  appId: "1:844791486238:web:14a977e63d295b25e75b0f",
+  apiKey: "AIzaSyBodsEs6LOG2JuCI6hbKr9WDtMDychZ5Z8",
+  authDomain: "minggukeduabelas-pbf.firebaseapp.com",
+  databaseURL: "https://minggukeduabelas-pbf.firebaseio.com",
+  projectId: "minggukeduabelas-pbf",
+  storageBucket: "minggukeduabelas-pbf.appspot.com",
+  messagingSenderId: "166929797429",
+  appId: "1:166929797429:web:67d80e39d63aad28463c7c"
 };
 
 export const myFirebase = firebase.initializeApp(firebaseConfig);
